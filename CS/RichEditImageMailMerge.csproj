@@ -1,0 +1,21 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+    <PropertyGroup>
+        <TargetFramework>net8.0-windows</TargetFramework>
+        <OutputType>Exe</OutputType>
+        <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+        <UseWindowsForms>true</UseWindowsForms>
+        <ImportWindowsDesktopTargets>true</ImportWindowsDesktopTargets>
+    </PropertyGroup>
+    <ItemGroup>
+        <Content Include="MailMergeTemplate.rtf">
+          <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </Content>
+        <Content Include="nwind.mdb">
+            <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </Content>
+    </ItemGroup>
+    <ItemGroup>
+        <PackageReference Include="DevExpress.Win.RichEdit" Version="22.2.*" />
+        <PackageReference Include="System.Data.OleDb" Version="9.0.2" />
+    </ItemGroup>
+</Project>
